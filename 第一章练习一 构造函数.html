@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset ="UTF-8"/>
+</head>
+<body>
+	<script>
+		function myFunction(x,y)
+		{
+			this.x=x;
+			this.y=y;
+		}
+		var p = new myFunction(1,2);
+		myFunction.prototype.r=function(){
+			return Math.sqrt(
+				this.x*this.x+this.y*this.y);
+		};
+		function tishi(){
+				window.alert(p.r());
+		}
+	</script>
+		<script>
+	</script>
+<button id="button1" onclick="tishi()">点我</button>
+</body>
+</html>
